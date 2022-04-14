@@ -35,6 +35,8 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
   return (
     <>
     <Info 
+    title='Withdrawal Fee'
+    content='1 USDT fee will be added to the  USDT amount to be sent.'
     isOpen={isInnerOpen.info} 
     setIsOpen={() => setIsInnerOpen({...isOpen,info: !isInnerOpen.info}) } />
 
@@ -70,7 +72,7 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
                             }
                           })} 
                         className="form-control text-right py-2 font-bold  bg-gray-50  text-gray-30 border pl-24" />
-                      <div className="absolute top-8 left-3 font-medium  flex justify-center items-center space-x-2 text-gray-30">
+                      <div className="absolute bottom-7 left-3 font-medium  flex justify-center items-center space-x-2 text-gray-30">
                         <img src="/assets/svgs/usdt.svg" /> 
                         <span>USDT</span>
                       </div>

@@ -135,7 +135,7 @@ const Home = ({exchangeRate}) => {
         <h1 className="text-xl md:text-2xl font-bold leading-snug">We are more than happy to <br /> help out. </h1>
       </header>
 
-     <div className="container md:w-1/2">
+     <div className="container md:w-1/2 ">
 
      <form className={'grid md:grid-cols-2 gap-4'} onSubmit={handleSubmit(handleMessage)}>
 
