@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+  body {
+    @apply bg-white overflow-x-hidden;
+  }
+
+@layer components {
+
+  * {
+    @apply transition-all duration-100;
+  }
+
+  .container {
+    @apply md:w-[1200px] mx-auto px-5 md:px-0;
+  }
+
+  .btn {
+    @apply py-3 rounded text-white font-semibold;
+  }
+
+  .btn:hover {
+    @apply opacity-80;
+  }
+
+  .page-wrapper {
+    @apply relative  min-h-[100vh] z-20;
+  }
+
+
+  .form-control {
+    @apply w-full py-3 px-5 border-2 rounded-lg border-stone-200 focus:outline-0 text-blue-800;
+  }
+
+
+  .form-group {
+    @apply relative;
+  }
+
+  .form-group label,.form-group span {
+    @apply text-sm;
+  }
+
+   .modal-wrapper {
+    @apply overflow-x-hidden overflow-auto fixed top-0 h-full w-full left-0 text-gray-20
+  }
+
+  .modal-inner-wrapper {
+    @apply flex relative z-[300] items-center justify-center min-h-full w-full p-5 after:bg-black after:z-[100] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:opacity-50;
+  }
+
+  .modal-body {
+    @apply rounded-xl bg-white p-7 relative z-[300] md:w-3/4 lg:w-1/2 space-y-5; 
+  }
+  
+  .hide-modal {
+    @apply opacity-0 -z-50;
+  }
+
+  .show-modal {
+    @apply opacity-100 z-[200];
+  }
+
+  .error {
+    @apply text-xs text-red-600
+  }
+
+  .bounce-1 {
+    animation: bounce1 20s ease-in-out infinite alternate;
+    right: 5%; top: 5%;
+  }
+
+  .bounce-2 {
+    animation: bounce2 20s ease-in-out infinite alternate;
+    right: 10%; top: 40%;
+  }
+
+  .bounce-3 {
+    animation: bounce3 20s ease-in-out infinite alternate;
+    left: 5%; top: 40%;
+  }
+
+  .bounce-4 {
+    animation: bounce4 20s ease-in-out infinite alternate;
+    left: 15%; top: 70%;
+  }
+
+  @keyframes bounce1 {
+      10% { 
+        top: 2%;right: 20%;
+       }
+      100% { 
+        top: 75%;right: 2%;
+       }
+}
+
+
+@keyframes bounce2 {
+      10% { 
+        top: 20%;right: 25%;
+       }
+      100% { 
+        top: 50%;right: 10%;
+       }
+}
+
+@keyframes bounce3 {
+      10% { 
+        top: 3%;left: 10%;
+       }
+      100% { 
+        top: 25%;left: 20%;
+       }
+}
+
+
+@keyframes bounce4 {
+      10% { 
+        top: 85%;left: 30%;
+       }
+      100% { 
+        top: 5%;left: 15%;
+       }
+}
+
+
+
+}
+
+
+
+
+
