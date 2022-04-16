@@ -37,7 +37,7 @@ const Step4 = ({ isOpen, setIsOpen, next, back}) => {
                       <label>Network: Tron (TRC-20)</label>
                       <input  
                         type="text" 
-                        className="form-control py-2 font-medium  bg-gray-50  text-gray-30 border" 
+                        className="form-control py-2 font-medium  bg-gray-50  text-gray-30 border pr-12" 
                         defaultValue={`TTYYI39987NXHBX@11783`} />
                       <button type="button" className="absolute right-2 bottom-3 text-blue-900 text-sm" 
                       onClick={() => copyText('TTYYI39987NXHBX')}>Copy</button>

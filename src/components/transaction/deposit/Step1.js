@@ -97,7 +97,7 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
                       <label>USDT (TR-20)</label>
                       <input type="text" 
                         onChange={(e) => setTransactionData({...transactionData,address: e.target.value})}
-                        className="form-control py-2 font-medium  bg-gray-50  text-gray-30 border "  />
+                        className="form-control py-2 font-medium  bg-gray-50  text-gray-30 border pr-12"  />
                       <button type="button" className="absolute right-2 bottom-3 text-blue-900 text-sm" onClick={() => copyText(transactionData.address)}>Copy</button>
                   </div>
 

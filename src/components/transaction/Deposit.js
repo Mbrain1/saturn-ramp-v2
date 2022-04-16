@@ -16,11 +16,11 @@ const Deposit = ({ selected, setSelected}) => {
 
   useEffect(() => {
 
-    if(transactionData.type == "Deposit" && transactionData.isLogin){
+    if(transactionData.type == "Deposit"){
         setIsOpen({...isOpen,step3: !isOpen.step3})
     }
 
-  },[transactionData.type,transactionData.isLogin])
+  },[transactionData.isLogin])
 
   return (
     <>  

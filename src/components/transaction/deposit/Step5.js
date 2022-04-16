@@ -17,6 +17,8 @@ const Step5 = ({ isOpen, setIsOpen, next, back}) => {
 
   const handlePayment = (e) => {
       e.preventDefault();
+
+      setIsOpen() //Close modal
   }
 
   return (

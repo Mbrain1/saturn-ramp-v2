@@ -11,6 +11,8 @@ const Step3 = ({ isOpen, setIsOpen, next, back}) => {
 
   const handlePayment = (e) => {
       e.preventDefault();
+
+      next();
   }
 
   return (
@@ -61,14 +63,14 @@ const Step3 = ({ isOpen, setIsOpen, next, back}) => {
                      Your Information 
                    </div>
 
-                   <div className="form-group">
+                   <div className="form-group break-words">
                       <label>Wallet Address</label>
                       <h3 className="font-medium text-lg">{transactionData.address}</h3>
                   </div>
 
                    <div className="form-group">
                       <label>Mobile Number</label>
-                      <h3 className="font-medium text-lg">{transactionData.address}</h3>
+                      <h3 className="font-medium text-lg">{transactionData.phone_number}</h3>
                   </div>
 
                    <div className="form-group md:col-span-2">

@@ -57,14 +57,20 @@ const Step2 = ({isOpen,setIsOpen,next}) => {
 
             <section className={`grid gap-5`}>
                   <button 
-                     onClick={() => setIsInnerOpen({...isOpen,signin: !isInnerOpen.signin}) }
+                     onClick={() => {
+                      setIsOpen();
+                      setIsInnerOpen({...isOpen,signin: !isInnerOpen.signin}) }
+                    }
                      className="text-left bg-blue-900 p-3 rounded-lg text-white">
                      <h2>Sign In</h2>
                      <p className="text-sm">Welcome back, connect to complete your transactions</p>
                   </button>
 
                   <button 
-                    onClick={() => setIsInnerOpen({...isOpen,signup: !isInnerOpen.signup}) }
+                    onClick={() => {
+                      setIsOpen();
+                      setIsInnerOpen({...isOpen,signup: !isInnerOpen.signup}) }
+                    }
                     className="text-left p-3 rounded-lg bg-gray-800">
                      <h2>Get Started </h2>
                      <p className="text-sm">Are you new here? Sign up to complete your transactions</p>

@@ -10,6 +10,8 @@ const Step4 = ({ isOpen, setIsOpen, next, back}) => {
 
   const handlePayment = (e) => {
       e.preventDefault();
+
+      next()
   }
 
   return (
@@ -43,14 +45,14 @@ const Step4 = ({ isOpen, setIsOpen, next, back}) => {
 
               
 
-                   <div className="form-group">
+                   <div className="form-group break-words">
                       <label>Bank Account </label>
-                      <h3 className="font-medium text-lg">{transactionData.address}</h3>
+                      <h3 className="font-medium text-lg">{transactionData.bank_name}</h3>
                   </div>
 
-                   <div className="form-group">
+                   <div className="form-group break-words">
                       <label>Account name</label>
-                      <h3 className="font-medium text-lg">{transactionData.address}</h3>
+                      <h3 className="font-medium text-lg">{transactionData.account_name}</h3>
                   </div>
 
                  <div className="form-group md:col-span-2">

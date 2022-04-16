@@ -13,11 +13,11 @@ const Withdrawal = ({ selected, setSelected }) => {
 
    useEffect(() => {
 
-    if(transactionData.type == "Withdrawal" && transactionData.isLogin){
+    if(transactionData.type == "Withdrawal"){
         setIsOpen({...isOpen,step3: !isOpen.step3})
     }
 
-  },[transactionData.type,transactionData.isLogin])
+  },[transactionData.isLogin])
 
   return (
     <>  
