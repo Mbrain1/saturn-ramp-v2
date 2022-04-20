@@ -62,11 +62,11 @@
   }
 
    .modal-wrapper {
-    @apply overflow-x-hidden z-[100] overflow-auto fixed top-0 h-full w-full left-0 text-gray-20
+    @apply overflow-x-hidden z-[100] overflow-y-auto fixed top-0 h-screen w-full left-0 text-gray-20
   }
 
   .modal-inner-wrapper {
-    @apply flex items-center relative z-[200] justify-center min-h-full w-full p-5 after:bg-blue-700 after:z-[100] after:absolute after:top-0 after:left-0 after:min-h-full after:w-full ;
+    @apply flex flex-col items-center relative z-[200] justify-center min-h-full w-full p-5 after:bg-blue-700 after:z-[100] after:absolute after:top-0 after:left-0 after:min-h-full after:w-full ;
   }
 
   .modal-body {

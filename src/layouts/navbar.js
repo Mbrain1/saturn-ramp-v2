@@ -7,7 +7,7 @@ export default function Navbar() {
     const [show, setShow] = useState(false);
 
     return (
-        <header className="bg-blue-500 py-10">
+        <header className="bg-blue-500 py-10 w-full">
            <nav className="container flex justify-between items-center text-white text-lg font-medium relative z-10">
                <Link href="/"><a><img src="/assets/images/logo/logo3.png" /></a></Link>
 
