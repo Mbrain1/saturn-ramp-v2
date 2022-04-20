@@ -3,6 +3,7 @@ import {ContextApi} from "/src/components/ContextApi";
 import { copyText } from "/helpers/toast";
 import { RiInformationFill } from "react-icons/ri";
 import Info from "/src/components/transaction/inc/Info";
+import Modal from "/src/components/Modal";
 
 const Step1 = ({isOpen,setIsOpen,next}) => {
 
@@ -40,16 +41,12 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
     isOpen={isInnerOpen.info}
     title='Deposit Fee'
     content='1 USDT fee will be deducted from the  USDT amount to be withdrawn. The fee is the transaction commission.' 
-    setIsOpen={() => setIsInnerOpen({...isOpen,info: !isInnerOpen.info}) } />
+    setIsOpen={() => setIsInnerOpen({...isInnerOpen,info: !isInnerOpen.info}) } />
 
-    <section className={`modal-wrapper ${isOpen ? 'show-modal' : 'hide-modal'} `}>
-
-      <div className="modal-inner-wrapper">
-
-      <div className="modal-body">
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
             <header className="space-y-2">
                         <div className="flex justify-between items-center">
-                          <h2 className="text-2xl font-bold">Deposit Naira to Receive USDT</h2>
+                          <h2 className="font-bold">Deposit Naira to Receive USDT</h2>
                           <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
                         <p>Transfer Naira to receive USDT in your wallet address</p>
@@ -110,9 +107,7 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
                         </button>
                   </div>
             </form>
-      </div>
-    </div>
-  </section>
+     </Modal>
     </>
   )
 }

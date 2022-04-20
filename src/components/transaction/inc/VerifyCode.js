@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup"
 import Back from "/src/components/transaction/inc/Back";
+import Modal from "/src/components/Modal";
 
 const VerifyCode = ({isOpen,setIsOpen,next,back}) => {
   
@@ -17,16 +18,11 @@ const VerifyCode = ({isOpen,setIsOpen,next,back}) => {
     }
 
   return (
-    <>
- <section className={`modal-wrapper ${isOpen ? 'show-modal z-[5000]' : 'hide-modal'} `}>
-
-      <div className="modal-inner-wrapper">
-
-      <div className="modal-body sm:w-1/2 md:w-1/3">
+         <Modal isOpen={isOpen} setIsOpen={setIsOpen} bodyClass="sm:w-1/2 md:w-1/3">
             <header className="space-y-2">
                         <Back back={() => back()} />
                         <div className="flex justify-between items-center">
-                          <h2 className="text-2xl font-bold">Verification Code</h2>
+                          <h2 className="font-bold">Verification Code</h2>
                           <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
                         <p className="text-base">Provide the verification code sent to you</p>
@@ -63,10 +59,7 @@ const VerifyCode = ({isOpen,setIsOpen,next,back}) => {
                         </button>
                   </div>
             </form>
-      </div>
-    </div>
-  </section>
-    </>
+      </Modal>
   )
 }
 

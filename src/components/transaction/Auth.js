@@ -13,12 +13,15 @@ const Step2 = ({isOpen,setIsOpen,next}) => {
     <>
       <Signin 
        isOpen={isInnerOpen.signin} 
-       setIsOpen={() => setIsInnerOpen({...isOpen,signin: !isInnerOpen.signin}) } />
+       setIsOpen={() => setIsInnerOpen({...isOpen,signin: !isInnerOpen.signin}) }
+       signup={() => setIsInnerOpen({...isOpen,signup: !isInnerOpen.signup,signin: !isInnerOpen.signin}) } 
+        />
 
        <Signup 
        isOpen={isInnerOpen.signup} 
        setIsOpen={() => setIsInnerOpen({...isOpen,signup: !isInnerOpen.signup}) } 
        next={() => setIsInnerOpen({...isOpen,signup: !isInnerOpen.signup,verifyMobile :  !isInnerOpen.verifyMobile}) } 
+       signin={() => setIsInnerOpen({...isOpen,signup: !isInnerOpen.signup,signin: !isInnerOpen.signin}) }
        />
 
       <VerifyMobile 
@@ -61,9 +64,9 @@ const Step2 = ({isOpen,setIsOpen,next}) => {
                       setIsOpen();
                       setIsInnerOpen({...isOpen,signin: !isInnerOpen.signin}) }
                     }
-                     className="text-left bg-blue-900 p-3 rounded-lg text-white">
-                     <h2>Sign In</h2>
-                     <p className="text-sm">Welcome back, connect to complete your transactions</p>
+                     className="text-left bg-blue-900 p-3 rounded-lg text-white space-y-1 px-4">
+                     <h2 className="text-lg">Sign In</h2>
+                     <p className="text-xs text-light opacity-80">Welcome back, connect to complete your transactions</p>
                   </button>
 
                   <button 
@@ -71,9 +74,9 @@ const Step2 = ({isOpen,setIsOpen,next}) => {
                       setIsOpen();
                       setIsInnerOpen({...isOpen,signup: !isInnerOpen.signup}) }
                     }
-                    className="text-left p-3 rounded-lg bg-gray-800">
-                     <h2>Get Started </h2>
-                     <p className="text-sm">Are you new here? Sign up to complete your transactions</p>
+                    className="text-left p-3 rounded-lg bg-gray-20 text-gray-900 border-2 border-gray-100 space-y-1 px-4">
+                     <h2 className="text-lg font-semibold">Get Started </h2>
+                     <p className="text-xs font-medium text-gray-300">Are you new here? Sign up to complete your transactions</p>
                   </button>
             </section>
          </div>

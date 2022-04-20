@@ -8,6 +8,19 @@
     @apply bg-white overflow-x-hidden;
   }
 
+
+   .modal-body header h2 {
+      @apply text-base md:text-xl text-gray-200;
+   }
+
+   .modal-body header p {
+      @apply text-sm md:text-base text-gray-700 font-medium;
+   }
+
+   .modal-body header svg {
+    @apply text-black;
+   }
+
 @layer components {
 
   * {
@@ -19,7 +32,7 @@
   }
 
   .btn {
-    @apply py-3 rounded text-white font-semibold;
+    @apply py-3 rounded text-white font-medium text-base;
   }
 
   .btn:hover {
@@ -37,24 +50,29 @@
 
 
   .form-group {
-    @apply relative;
+    @apply relative space-y-2 text-gray-700;
   }
 
-  .form-group label,.form-group span {
-    @apply text-sm;
+  .form-group label{
+    @apply text-sm md:text-base font-medium;
+  }
+
+  .form-group span {
+    @apply text-sm md:text-base ;
   }
 
    .modal-wrapper {
-    @apply overflow-x-hidden overflow-auto fixed top-0 h-full w-full left-0 text-gray-20
+    @apply overflow-x-hidden z-[100] overflow-auto fixed top-0 h-full w-full left-0 text-gray-20
   }
 
   .modal-inner-wrapper {
-    @apply flex items-center justify-center min-h-full w-full p-5 after:bg-black after:z-[100] after:absolute after:top-0 after:left-0 after:h-full after:w-full after:opacity-50;
+    @apply flex items-center relative z-[200] justify-center min-h-full w-full p-5 after:bg-blue-700 after:z-[100] after:absolute after:top-0 after:left-0 after:min-h-full after:w-full ;
   }
 
   .modal-body {
-    @apply rounded-xl bg-white p-7 relative z-[300] md:w-3/4 lg:w-1/2 space-y-5; 
+    @apply rounded-xl bg-white p-7 relative z-[300] md:w-1/2 lg:w-1/3 space-y-5; 
   }
+
   
   .hide-modal {
     @apply hidden;

@@ -4,8 +4,9 @@ import {ContextApi} from "/src/components/ContextApi";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup"
+import Modal from "/src/components/Modal";
 
-const Signin = ({ isOpen, setIsOpen, next }) => {
+const Signin = ({ isOpen, setIsOpen, next, signin }) => {
   
   const { transactionData, setTransactionData } = useContext(ContextApi);
 
@@ -25,15 +26,10 @@ const Signin = ({ isOpen, setIsOpen, next }) => {
     }
 
   return (
-    <>
- <section className={`modal-wrapper ${isOpen ? 'show-modal z-[5000]' : 'hide-modal'} `}>
-
-      <div className="modal-inner-wrapper">
-
-      <div className="modal-body sm:w-1/2 md:w-1/3">
+     <Modal isOpen={isOpen} setIsOpen={setIsOpen} bodyClass="sm:w-1/2 md:w-1/3">
             <header className="space-y-2">
                         <div className="flex justify-between items-center">
-                          <h2 className="text-2xl font-bold">Create your account</h2>
+                          <h2 className="font-bold">Create your account</h2>
                           <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
                         <p>Fill in necessary information to set up your account</p>
@@ -86,13 +82,10 @@ const Signin = ({ isOpen, setIsOpen, next }) => {
                   </div>
 
                   <div className="form-group md:col-span-2 text-center">
-                      Already have an account? <Link href="/"><a className="text-blue-900 font-semibold">Sign In</a></Link>
+                      Already have an account? <button type="button" onClick={() => signin()} className="text-blue-900 font-semibold">Sign In</button>
                   </div>
             </form>
-      </div>
-    </div>
-  </section>
-    </>
+      </Modal>
   )
 }
 

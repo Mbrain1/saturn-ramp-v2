@@ -3,6 +3,7 @@ import {ContextApi} from "/src/components/ContextApi";
 import { copyText } from "/helpers/toast";
 import { RiInformationFill } from "react-icons/ri";
 import Info from "/src/components/transaction/inc/Info";
+import Modal from "/src/components/Modal";
 
 const Step1 = ({isOpen,setIsOpen,next}) => {
 
@@ -38,16 +39,12 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
     title='Withdrawal Fee'
     content='1 USDT fee will be added to the  USDT amount to be sent.'
     isOpen={isInnerOpen.info} 
-    setIsOpen={() => setIsInnerOpen({...isOpen,info: !isInnerOpen.info}) } />
+    setIsOpen={() => setIsInnerOpen({...isInnerOpen,info: !isInnerOpen.info}) } />
 
-    <section className={`modal-wrapper ${isOpen ? 'show-modal' : 'hide-modal'} `}>
-
-      <div className="modal-inner-wrapper">
-
-      <div className="modal-body">
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
             <header className="space-y-2">
                         <div className="flex justify-between items-center">
-                          <h2 className="text-2xl font-bold">Send USDT  to Receive Naira </h2>
+                          <h2 className="font-bold">Send USDT  to Receive Naira </h2>
                           <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
                         <p>Send USDT to receive Naira in any bank account </p>
@@ -72,7 +69,7 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
                             }
                           })} 
                         className="form-control text-right py-2 font-bold  bg-gray-50  text-gray-30 border pl-24" />
-                      <div className="absolute bottom-7 left-3 font-medium  flex justify-center items-center space-x-2 text-gray-30">
+                      <div className="absolute bottom-9 md:bottom-10 left-3 font-medium  flex justify-center items-center space-x-2 text-gray-30">
                         <img src="/assets/svgs/usdt.svg" /> 
                         <span>USDT</span>
                       </div>
@@ -107,9 +104,7 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
                         </button>
                   </div>
             </form>
-      </div>
-    </div>
-  </section>
+      </Modal>
     </>
   )
 }

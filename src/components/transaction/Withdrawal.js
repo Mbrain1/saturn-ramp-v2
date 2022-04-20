@@ -37,6 +37,7 @@ const Withdrawal = ({ selected, setSelected }) => {
             isOpen={isOpen.step3} 
             setIsOpen={() => setIsOpen({...isOpen,step3: !isOpen.step3})}
             next={() => setIsOpen({...isOpen,step4: !isOpen.step4,step3: !isOpen.step3})}
+            back={() => setIsOpen({...isOpen,step1: !isOpen.step1,step3: !isOpen.step3})}
             />
 
           <Step4 

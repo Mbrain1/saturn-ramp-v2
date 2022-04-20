@@ -37,19 +37,19 @@ const Home = ({exchangeRate}) => {
 
 
   return (
-    <>
+    <div>
 
     <section className="bg-blue-500 min-h-[80vh] relative text-white">
         <div className="container space-y-12 py-5 md:py-12">
 
 
             <div className="space-y-5 mx-auto text-center md:w-1/2">
-              <h1 className="text-3xl md:text-6xl font-bold leading-snug">Deposit & Withdraw Naira on Saturn Ramp</h1>
-              <p className="text-lg text-blue-400">Use  Saturn Ramp to fund and withdraw from your USDT wallet on any platform, it's quick and easy with no extra fees.
+              <h1 className="text-3xl md:text-6xl font-bold leading-snug relative z-[5]">Deposit & Withdraw Naira on Saturn Ramp</h1>
+              <p className="text-lg text-blue-400 relative z-[5]">Use  Saturn Ramp to fund and withdraw from your USDT wallet on any platform, it's quick and easy with no extra fees.
               </p>
             </div>
 
-           <div className="flex justify-center relative z-[1]">
+           <div className="flex justify-center relative z-20">
 
              <Transaction exchangeRate={exchangeRate} />
 
@@ -88,7 +88,7 @@ const Home = ({exchangeRate}) => {
                 {id:2,content: 'Enter your USDT wallet of choice (TRC-20) click continue and then enter your email and platform of choice'},
                 {id:3,content: 'Make a simple bank transfer of the Naira amount to the bank account number provided and wait a few seconds for the USDT to show up in your wallet'}
               ].map((item,index)=>
-                    <li key={index} className="min-h-[120px] flex space-x-4 items-start justify-start bg-blue-400 rounded-2xl px-5 py-5">
+                    <li key={index} className="min-h-[120px] relative z-[1]  flex space-x-4 items-start justify-start bg-blue-400 rounded-2xl px-5 py-5">
                       <div><button className="font-bold text-xl md:text-2xl">{item.id}</button> </div>
                       <p className="text-gray-500">
                         {item.content}
@@ -108,7 +108,7 @@ const Home = ({exchangeRate}) => {
                 {id:2,content: 'Enter your bank information you want the naira amount to be deposited into and a valid email for transaction notification.'},
                 {id:3,content: 'Transfer of the USDT amount to be converted the USDT wallet address (TRC-20) provided and wait a few seconds for the Naira amount to show in your bank account.'}
               ].map((item,index)=>
-                    <li key={index} className="min-h-[120px] flex space-x-4 items-start justify-start bg-pink-200 rounded-2xl px-5 py-5">
+                    <li key={index} className="min-h-[120px]  relative z-[1] flex space-x-4 items-start justify-start bg-pink-200 rounded-2xl px-5 py-5">
                       <div><button className="font-bold text-xl md:text-2xl">{item.id}</button> </div>
                       <p className="text-gray-500">
                         {item.content}
@@ -217,7 +217,7 @@ const Home = ({exchangeRate}) => {
      </div>
      
    </section>
-    </>
+    </div>
   )
 }
 

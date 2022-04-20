@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup"
 import Back from "/src/components/transaction/inc/Back";
+import Modal from "/src/components/Modal";
 
 const VerifyBvn = ({isOpen,setIsOpen,next, back }) => {
   
@@ -24,18 +25,14 @@ const VerifyBvn = ({isOpen,setIsOpen,next, back }) => {
     }
 
   return (
-<section className={`modal-wrapper ${isOpen ? 'show-modal z-[5000]' : 'hide-modal'} `}>
-
-      <div className="modal-inner-wrapper">
-
-      <div className="modal-body sm:w-1/2 md:w-1/3">
+       <Modal isOpen={isOpen} setIsOpen={setIsOpen} bodyClass="sm:w-1/2 md:w-1/3">
             <header className="space-y-2">
                         <Back back={() => back()} />
                         <div className="flex justify-between items-center">
-                          <h2 className="text-2xl font-bold">Verify Your Identity</h2>
+                          <h2 className="font-bold">Verify Your Identity</h2>
                           <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
-                        <p className="text-base">Bank verification is needed for transactions above 50,000. Please provide your BVN and an OTP will be sent to the mobile number attached to it. </p>
+                        <p>Bank verification is needed for transactions above 50,000. Please provide your BVN and an OTP will be sent to the mobile number attached to it. </p>
             </header>
 
            <form className={`grid md:grid-cols-2 gap-4 text-base text-gray-200`}  onSubmit={handleSubmit(handleVerification)}>
@@ -56,9 +53,7 @@ const VerifyBvn = ({isOpen,setIsOpen,next, back }) => {
                         </button>
                   </div>
             </form>
-      </div>
-    </div>
-  </section>
+      </Modal>
   )
 }
 
