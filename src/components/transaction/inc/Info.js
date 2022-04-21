@@ -1,7 +1,6 @@
 const Info = ({isOpen,setIsOpen, title, content}) => {
   
   return (
-    <>
  <section className={`modal-wrapper ${isOpen ? 'show-modal z-[5000] backdrop-blur-sm' : 'hide-modal'} `}>
 
       <div className="modal-inner-wrapper after:bg-black after:opacity-70" >
@@ -20,7 +19,6 @@ const Info = ({isOpen,setIsOpen, title, content}) => {
       </div>
     </div>
   </section>
-    </>
   )
 }
 

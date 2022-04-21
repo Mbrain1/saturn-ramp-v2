@@ -4,13 +4,14 @@ import Signup from "./inc/Signup";
 import VerifyCode from "./inc/VerifyCode";
 import VerifyBvn from "./inc/VerifyBvn";
 import VerifyMobile from "./inc/VerifyMobile";
+import Modal from "/src/components/Modal";
 
 const Step2 = ({isOpen,setIsOpen,next}) => {
   
   const [ isInnerOpen, setIsInnerOpen ] = useState({signin: false,signup:false,verifyMobile:false,verifyBvn:false,verifyCode:false});
 
   return (
-    <>
+    <div>
       <Signin 
        isOpen={isInnerOpen.signin} 
        setIsOpen={() => setIsInnerOpen({...isOpen,signin: !isInnerOpen.signin}) }
@@ -45,11 +46,7 @@ const Step2 = ({isOpen,setIsOpen,next}) => {
        />
        
 
-      <section className={`modal-wrapper ${isOpen ? 'show-modal' : 'hide-modal'} `}>
-
-      <div className="modal-inner-wrapper">
-
-      <div className="modal-body">
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
             <header className="space-y-2">
                         <div className="flex justify-between items-center">
                           <h2 className="text-2xl font-bold">Connect to Saturn Ramp </h2>
@@ -62,7 +59,7 @@ const Step2 = ({isOpen,setIsOpen,next}) => {
                   <button 
                      onClick={() => {
                       setIsOpen();
-                      setIsInnerOpen({...isOpen,signin: !isInnerOpen.signin}) }
+                      setIsInnerOpen({...isOpen,signin: true}) }
                     }
                      className="text-left bg-blue-900 p-3 rounded-lg text-white space-y-1 px-4">
                      <h2 className="text-lg">Sign In</h2>
@@ -72,17 +69,15 @@ const Step2 = ({isOpen,setIsOpen,next}) => {
                   <button 
                     onClick={() => {
                       setIsOpen();
-                      setIsInnerOpen({...isOpen,signup: !isInnerOpen.signup}) }
+                      setIsInnerOpen({...isOpen,signup: true}) }
                     }
                     className="text-left p-3 rounded-lg bg-gray-20 text-gray-900 border-2 border-gray-100 space-y-1 px-4">
                      <h2 className="text-lg font-semibold">Get Started </h2>
                      <p className="text-xs font-medium text-gray-300">Are you new here? Sign up to complete your transactions</p>
                   </button>
             </section>
-         </div>
-      </div>
-  </section>
-    </>
+      </Modal>
+    </div>
   )
 }
 

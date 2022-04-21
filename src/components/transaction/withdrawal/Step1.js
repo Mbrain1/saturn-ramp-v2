@@ -34,7 +34,7 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
 
 
   return (
-    <>
+    <div>
     <Info 
     title='Withdrawal Fee'
     content='1 USDT fee will be added to the  USDT amount to be sent.'
@@ -45,7 +45,6 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
             <header className="space-y-2">
                         <div className="flex justify-between items-center">
                           <h2 className="font-bold">Send USDT  to Receive Naira </h2>
-                          <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
                         <p>Send USDT to receive Naira in any bank account </p>
             </header>
@@ -103,9 +102,19 @@ const Step1 = ({isOpen,setIsOpen,next}) => {
                           Continue
                         </button>
                   </div>
+
+                   <div className="form-group md:col-span-2 ">
+                      <button 
+                        className={`btn w-full py-1 text-blue-900`} 
+                        onClick={() => setIsOpen()}
+                        type="button"
+                        >
+                          Cancel
+                        </button>
+                  </div>
             </form>
       </Modal>
-    </>
+    </div>
   )
 }
 

@@ -21,7 +21,6 @@ const Step4 = ({ isOpen, setIsOpen, next, back}) => {
                          <Back back={() => back()} />
                         <div className="flex justify-between items-center">
                           <h2 className="font-bold">Transfer Naira to Recieve USDT</h2>
-                          <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
                         <p>Pay your naira into this account to receive in USDT</p>
             </header>
@@ -35,7 +34,7 @@ const Step4 = ({ isOpen, setIsOpen, next, back}) => {
                         type="text" 
                         className="form-control py-2 bg-gray-50 font-bold text-gray-900 border" 
                         defaultValue={100000} />
-                      <button type="button" className="absolute right-2 bottom-3 text-blue-900 text-sm" onClick={() => copyText('5454')}>Copy</button>
+                      <button type="button" className="absolute right-3 bottom-3 text-blue-900 text-sm" onClick={() => copyText('5454')}>Copy</button>
                   </div>
                 
 
@@ -91,6 +90,16 @@ const Step4 = ({ isOpen, setIsOpen, next, back}) => {
 
                    <div className="form-group md:col-span-2">
                       <button className="btn w-full bg-blue-900 py-4 rounded-lg" type="submit">I have made transfer</button>
+                  </div>
+
+                   <div className="form-group md:col-span-2 ">
+                      <button 
+                        className={`btn w-full py-1 text-blue-900`} 
+                        onClick={() => setIsOpen()}
+                        type="button"
+                        >
+                          Cancel
+                     </button>
                   </div>
 
             </form>

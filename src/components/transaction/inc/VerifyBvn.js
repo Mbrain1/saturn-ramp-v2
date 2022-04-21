@@ -30,7 +30,6 @@ const VerifyBvn = ({isOpen,setIsOpen,next, back }) => {
                         <Back back={() => back()} />
                         <div className="flex justify-between items-center">
                           <h2 className="font-bold">Verify Your Identity</h2>
-                          <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
                         <p>Bank verification is needed for transactions above 50,000. Please provide your BVN and an OTP will be sent to the mobile number attached to it. </p>
             </header>
@@ -50,6 +49,16 @@ const VerifyBvn = ({isOpen,setIsOpen,next, back }) => {
                         className={`btn w-full py-3 bg-blue-900`} 
                         type="submit">
                           Continue
+                        </button>
+                  </div>
+
+                   <div className="form-group md:col-span-2 ">
+                      <button 
+                        className={`btn w-full py-1 text-blue-900`} 
+                        onClick={() => setIsOpen()}
+                        type="button"
+                        >
+                          Cancel
                         </button>
                   </div>
             </form>

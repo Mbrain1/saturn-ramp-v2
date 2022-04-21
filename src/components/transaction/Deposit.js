@@ -22,8 +22,9 @@ const Deposit = ({ selected, setSelected}) => {
 
   },[transactionData.isLogin])
 
+
   return (
-    <>  
+    <div>  
           <Step1 
             isOpen={isOpen.step1} 
             setIsOpen={() => setIsOpen({...isOpen,step1: !isOpen.step1})}
@@ -68,7 +69,7 @@ const Deposit = ({ selected, setSelected}) => {
                      <div className="font-semibold">Deposit</div>
                      <p>Transfer Naira to receive USDT in wallet</p>
                     </button>
-        </>
+        </div>
   )
 }
 

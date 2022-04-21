@@ -7,13 +7,11 @@ export default function Layout({ children }) {
   
 
   return (
-    <div>
      <div className="page-wrapper">
         
-        <Navbar />
-          {children}
-    </div>
-     {router.pathname !=  "/"  ? null : <Footer1 />}
+            <Navbar isContainer={true} />
+            {children}
+             <Footer1 />
     </div>
   )
 }

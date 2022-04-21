@@ -23,7 +23,7 @@ const Step3 = ({ isOpen, setIsOpen, next, back}) => {
   }
 
   return (
-    <>
+    <div>
     <Info 
     isOpen={isInnerOpen.info}
     title='Deposit Fee'
@@ -35,7 +35,6 @@ const Step3 = ({ isOpen, setIsOpen, next, back}) => {
                          <Back back={() => back()} />
                         <div className="flex justify-between items-center">
                           <h2 className="font-bold">Deposit Transaction Summary</h2>
-                          <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
                         <p>Confirm transaction details</p>
             </header>
@@ -91,9 +90,18 @@ const Step3 = ({ isOpen, setIsOpen, next, back}) => {
                       <button className="btn w-full bg-blue-900 py-4 rounded-lg" type="submit" >Continue to make payment</button>
                   </div>
 
+                   <div className="form-group md:col-span-2 ">
+                      <button 
+                        className={`btn w-full py-1 text-blue-900`} 
+                        onClick={() => setIsOpen()}
+                        type="button"
+                        >
+                          Cancel
+                        </button>
+                  </div>
             </form>
        </Modal>
-    </>
+    </div>
   )
 }
 

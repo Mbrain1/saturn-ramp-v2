@@ -5,7 +5,8 @@
 
 
   body {
-    @apply bg-white overflow-x-hidden;
+    /*background-attachment: fixed;*/
+    @apply overflow-hidden;
   }
 
 
@@ -32,7 +33,7 @@
   }
 
   .btn {
-    @apply py-3 rounded text-white font-medium text-base;
+    @apply py-3 rounded text-white font-semibold text-base;
   }
 
   .btn:hover {
@@ -40,7 +41,7 @@
   }
 
   .page-wrapper {
-    @apply relative  min-h-[100vh] z-20;
+    @apply relative overflow-y-auto h-[100vh] z-20;
   }
 
 
@@ -62,11 +63,11 @@
   }
 
    .modal-wrapper {
-    @apply overflow-x-hidden z-[100] overflow-y-auto fixed top-0 h-screen w-full left-0 text-gray-20
+    @apply overflow-hidden z-[100] overflow-y-auto fixed top-0 h-[100vh] w-full left-0 text-gray-20
   }
 
   .modal-inner-wrapper {
-    @apply flex flex-col items-center relative z-[200] justify-center min-h-full w-full p-5 after:bg-blue-700 after:z-[100] after:absolute after:top-0 after:left-0 after:min-h-full after:w-full ;
+    @apply flex flex-col items-center sticky top-0 z-[200] justify-center min-h-[100vh] w-full p-5 after:bg-blue-700 after:z-[100] after:absolute after:top-0 after:right-0 after:left-0 after:min-h-full
   }
 
   .modal-body {

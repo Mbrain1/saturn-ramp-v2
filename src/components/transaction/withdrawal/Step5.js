@@ -25,7 +25,6 @@ const Step5 = ({ isOpen, setIsOpen, next, back}) => {
   return (
      <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
             <header className="space-y-2">
-                         <Back back={() => back()} />
                         <div className="flex justify-between items-center">
                           <h2 className="font-bold">Transaction Progress </h2>
                           <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>

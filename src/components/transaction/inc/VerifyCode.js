@@ -23,7 +23,6 @@ const VerifyCode = ({isOpen,setIsOpen,next,back}) => {
                         <Back back={() => back()} />
                         <div className="flex justify-between items-center">
                           <h2 className="font-bold">Verification Code</h2>
-                          <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
                         <p className="text-base">Provide the verification code sent to you</p>
             </header>
@@ -58,6 +57,17 @@ const VerifyCode = ({isOpen,setIsOpen,next,back}) => {
                           Verify
                         </button>
                   </div>
+
+                   <div className="form-group md:col-span-2 ">
+                      <button 
+                        className={`btn w-full py-1 text-blue-900`} 
+                        onClick={() => setIsOpen()}
+                        type="button"
+                        >
+                          Cancel
+                        </button>
+                  </div>
+                  
             </form>
       </Modal>
   )

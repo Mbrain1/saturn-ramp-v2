@@ -30,7 +30,6 @@ const VerifyMobile = ({isOpen,setIsOpen,next,back }) => {
                         <Back back={() => back()} />
                         <div className="flex justify-between items-center">
                           <h2 className="font-bold">Verify Your Mobile Number</h2>
-                          <button onClick={() => setIsOpen()}><img src="/assets/svgs/times.svg" /></button>
                         </div>
                         <p className="text-base">An OTP code will be sent to your mobile number for verification</p>
             </header>
@@ -52,6 +51,17 @@ const VerifyMobile = ({isOpen,setIsOpen,next,back }) => {
                           Continue
                         </button>
                   </div>
+
+                   <div className="form-group md:col-span-2 ">
+                      <button 
+                        className={`btn w-full py-1 text-blue-900`} 
+                        onClick={() => setIsOpen()}
+                        type="button"
+                        >
+                          Cancel
+                        </button>
+                  </div>
+
             </form>
       </Modal>
   )

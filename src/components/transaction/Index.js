@@ -19,7 +19,6 @@ const Home = ( {exchangeRate} ) => {
   },[selected])
 
   return (
-    <>
     <aside className="lg:px-10  z-50 w-full md:w-3/5 text-xl text-white space-y-5 pt-5">
 
                 <h2 className="text-center relative after:w-14 after:absolute after:h-1 after:rounded-lg after:bg-white after:left-[45%] after:-top-6 text-medium">What would you like to do? </h2>
@@ -33,7 +32,6 @@ const Home = ( {exchangeRate} ) => {
                
                 
               </aside>
-    </>
   )
 }
 

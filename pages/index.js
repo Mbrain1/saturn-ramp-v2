@@ -39,7 +39,7 @@ const Home = ({exchangeRate}) => {
   return (
     <div>
 
-    <section className="bg-blue-500 min-h-[80vh] relative text-white">
+    <section className="bg-blue-500 min-h-[80vh] relative text-white py-5">
         <div className="container space-y-12 py-5 md:py-12">
 
 
