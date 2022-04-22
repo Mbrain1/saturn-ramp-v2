@@ -97,7 +97,7 @@ const Step3 = ({ isOpen, setIsOpen, next, back}) => {
                         type="button"
                         >
                           Cancel
-                        </button>
+                     </button>
                   </div>
             </form>
        </Modal>
